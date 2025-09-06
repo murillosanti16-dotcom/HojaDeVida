@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: rgb(249, 248, 248);
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+
+}
+.container{
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(50, 49, 49, 0.804);
+        
+}
+header{
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+.profile-pic{
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #feffff;
+
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    margin: 10px 0;
+}
+
+.section{
+    margin-bottom: 25%;
+    padding-bottom: 15%;
+    border-bottom: 1px dashed #171616;
+}
+
+h2{
+    color: #f3f5f8ef;
+    font-size: 1.3em;
+}
+h3{
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+.skills{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Skills li{
+    background: #d5d6d7;
+    color: rgb(26, 20, 20);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.print-button.container{
+    text-align: center;
+    margin: 20px;
+    
+}
+
+.print-button{
+     background: #2a4b2b;
+     color: white;
+     border: none;
+     padding: 18px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 16px;
+     transition: background-color 0.4;
+}
+
+.print-button :hover{
+    background-color: #8e97a0;
+}
+@media print{
+    .print-button.container {
+
+        display: none;
+    }
+}
