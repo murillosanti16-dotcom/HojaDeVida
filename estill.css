@@ -55,10 +55,10 @@ header p {
 .section {
     margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ddd; /* línea gris elegante */
+    border-bottom: 1px solid #ddd;
 }
 .section:last-child {
-    border-bottom: none; /* la última no lleva línea */
+    border-bottom: none;
 }
 .section h2 {
     color: #2c3e50;
@@ -109,4 +109,36 @@ footer {
     font-size: 13px;
     color: #555;
     margin-top: 30px;
+}
+
+/* ===== Ajustes para impresión ===== */
+@media print {
+    body {
+        background: #fff !important;
+    }
+
+    .container {
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Ocultar botón al imprimir */
+    .print-button-container {
+        display: none;
+    }
+
+    /* Evitar que salgan esas líneas punteadas (saltos de página) */
+    * {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    @page {
+        margin: 1.5cm;
+        size: A4;
+    }
 }
