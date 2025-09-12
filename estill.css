@@ -52,7 +52,7 @@ h3 {
 .section {
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 1px dashed #171616;
+    border-bottom: none; /* quitamos los punticos */
 }
 
 /* ========== LISTAS Y HABILIDADES ========== */
@@ -125,7 +125,7 @@ footer {
     }
 
     .section {
-        page-break-inside: avoid; /* evita cortes raros dentro de secciones */
+        page-break-inside: avoid;
     }
 
     footer {
