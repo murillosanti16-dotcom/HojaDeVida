@@ -50,8 +50,8 @@ h3 {
 
 /* ========== SECCIONES ========== */
 .section {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px dashed #171616;
 }
 
@@ -85,7 +85,7 @@ ul {
     background: #2a4b2b;
     color: white;
     border: none;
-    padding: 18px 20px;
+    padding: 12px 18px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -96,10 +96,40 @@ ul {
     background-color: #8e97a0;
 }
 
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 30px;
+}
+
 /* ========== ESTILOS PARA IMPRESIÓN ========== */
 @media print {
+    body {
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0 20px;
+    }
+
     .print-button-container {
         display: none;
     }
-}
 
+    .section {
+        page-break-inside: avoid; /* evita cortes raros dentro de secciones */
+    }
+
+    footer {
+        page-break-after: avoid;
+        margin-top: 20px;
+    }
+}
