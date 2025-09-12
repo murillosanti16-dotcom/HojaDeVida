@@ -1,104 +1,216 @@
-/* ========== GLOBAL STYLES ========== */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: rgb(249, 248, 248);
-    color: rgb(0, 0, 0);
-    margin: 0;
-    padding: 0;
-}
-
-/* ========== CONTAINER ========== */
-.container {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    background: rgb(255, 255, 255);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(50, 49, 49, 0.804);
-}
-
-/* ========== HEADER ========== */
-header {
-    text-align: center;
-    margin-bottom: 20%;
-}
-
-.profile-pic {
-    width: 150px; /* corregido: no es buena práctica usar 150% aquí */
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #feffff;
-}
-
-/* ========== TITULOS ========== */
-h1 {
-    color: rgb(0, 0, 0);
-    margin: 10px 0;
-}
-
-h2 {
-    color: #2c3e50; /* cambiado: antes era casi invisible (#f3f5f8ef) */
-    font-size: 1.3em;
-}
-
-h3 {
-    margin: 5px 0;
-    font-size: 1.1em;
-}
-
-/* ========== SECCIONES ========== */
-.section {
-    margin-bottom: 25%;
-    padding-bottom: 15%;
-    border-bottom: 1px dashed #171616;
-}
-
-/* ========== LISTAS Y HABILIDADES ========== */
-ul {
-    padding-left: 20px;
-}
-
-.skills {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skills li { /* corregido: era ".Skills li" y no coincidía con la clase */
-    background: #d5d6d7;
-    color: rgb(26, 20, 20);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-/* ========== BOTÓN DE IMPRIMIR ========== */
-.print-button-container { /* corregido: era ".print-button.container", que es incorrecto */
-    text-align: center;
-    margin: 20px;
-}
-
-.print-button {
-    background: #2a4b2b;
-    color: white;
-    border: none;
-    padding: 18px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.4s ease;
-}
-
-.print-button:hover {
-    background-color: #8e97a0;
-}
-
-/* ========== ESTILOS PARA IMPRESIÓN ========== */
-@media print {
-    .print-button-container {
-        display: none;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoja de Vida - Santiago Ramírez</title>
+  <style>
+    /* ========== GLOBAL STYLES ========== */
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        background-color: rgb(249, 248, 248);
+        color: rgb(0, 0, 0);
+        margin: 0;
+        padding: 0;
     }
-}
+
+    /* ========== CONTAINER ========== */
+    .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(50, 49, 49, 0.804);
+    }
+
+    /* ========== HEADER ========== */
+    header {
+        text-align: center;
+        margin-bottom: 20%;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #feffff;
+    }
+
+    /* ========== TITULOS ========== */
+    h1 {
+        color: rgb(0, 0, 0);
+        margin: 10px 0;
+    }
+
+    h2 {
+        color: #2c3e50;
+        font-size: 1.3em;
+    }
+
+    h3 {
+        margin: 5px 0;
+        font-size: 1.1em;
+    }
+
+    /* ========== SECCIONES ========== */
+    .section {
+        margin-bottom: 25%;
+        padding-bottom: 15%;
+        border-bottom: 1px dashed #171616;
+    }
+
+    /* ========== LISTAS Y HABILIDADES ========== */
+    ul {
+        padding-left: 20px;
+    }
+
+    .skills {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .skills li {
+        background: #d5d6d7;
+        color: rgb(26, 20, 20);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    /* ========== BOTÓN DE IMPRIMIR ========== */
+    .print-button-container {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .print-button {
+        background: #2a4b2b;
+        color: white;
+        border: none;
+        padding: 18px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.4s ease;
+    }
+
+    .print-button:hover {
+        background-color: #8e97a0;
+    }
+
+    /* ========== ESTILOS PARA IMPRESIÓN ========== */
+    @media print {
+        .print-button-container {
+            display: none;
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Encabezado -->
+    <header>
+      <img src="image.jpg.jpeg" alt="Foto de perfil" class="profile-pic">
+      <h1>Santiago Ramírez</h1>
+      <p>Desarrollador de Software | Técnico en Sistemas | Apasionado por la Tecnología</p>
+    </header>
+
+    <!-- Botón de imprimir -->
+    <div class="print-button-container">
+      <button onclick="window.print()" class="print-button">Imprimir</button>
+    </div>
+
+    <!-- Información Personal -->
+    <section class="section">
+      <h2>Información Personal</h2>
+      <ul>
+        <li><strong>Email:</strong> Murillosanti16@gmail.com</li>
+        <li><strong>Teléfono:</strong> 320 799 9075</li>
+        <li><strong>Ubicación:</strong> Aguadas, Caldas, Colombia</li>
+      </ul>
+    </section>
+
+    <!-- Perfil Profesional -->
+    <section class="section">
+      <h2>Perfil Profesional</h2>
+      <p>
+        Técnico en sistemas y desarrollador de software con experiencia en soporte técnico, desarrollo web y herramientas tecnológicas educativas. Apasionado por crear soluciones que faciliten la vida de las personas. Trabajo con responsabilidad, amabilidad y disposición al aprendizaje continuo.
+      </p>
+    </section>
+
+    <!-- Educación -->
+    <section class="section">
+      <h2>Educación</h2>
+      <div>
+        <h3>Institución Educativa Roberto Peláez</h3>
+        <p>Bachiller Técnico en Sistemas | 2016 - 2021</p>
+      </div>
+      <div>
+        <h3>Servicio Nacional de Aprendizaje (SENA)</h3>
+        <p>Tecnólogo en Análisis y Desarrollo de Software | 2022 - En curso</p>
+      </div>
+      <div>
+        <h3>Certificaciones</h3>
+        <ul>
+          <li>Introducción al Desarrollo Web - Google Actívate</li>
+          <li>Fundamentos de Python - Cisco Networking Academy</li>
+          <li>Curso de Soporte Técnico - Coursera (Google)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section class="section">
+      <h2>Experiencia Laboral</h2>
+      <div>
+        <h3>Auxiliar de Soporte Técnico</h3>
+        <p>Alcaldía de Aguadas | 2022 - 2023</p>
+        <p>Brindé soporte técnico a equipos de cómputo, configuración de redes y asistencia en herramientas de oficina para empleados públicos.</p>
+      </div>
+      <div>
+        <h3>Practicante en Desarrollo Web</h3>
+        <p>Cooperativa Educativa Caldas | 2023</p>
+        <p>Participación en el desarrollo y mantenimiento de una plataforma educativa en línea usando HTML, CSS y JavaScript.</p>
+      </div>
+    </section>
+
+    <!-- Proyectos Personales -->
+    <section class="section">
+      <h2>Proyectos Personales</h2>
+      <ul>
+        <li><strong>Sistema de Gestión Escolar:</strong> Aplicación web para registrar estudiantes, calificaciones y asistencia.</li>
+        <li><strong>Mi Portafolio:</strong> Página personal con proyectos y contacto. (github.com/santiago-dev/portafolio)</li>
+        <li><strong>App Agenda Diaria:</strong> Aplicación móvil básica para organizar tareas con recordatorios.</li>
+      </ul>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="section">
+      <h2>Habilidades Técnicas</h2>
+      <ul class="skills">
+        <li>HTML / CSS / JavaScript</li>
+        <li>Python (básico - intermedio)</li>
+        <li>Manejo de bases de datos (MySQL)</li>
+        <li>Soporte técnico a usuarios</li>
+        <li>Instalación de redes y software</li>
+        <li>Microsoft Office / Google Workspace</li>
+      </ul>
+    </section>
+
+    <!-- Declaración de Derechos de Autor -->
+    <section>
+      <h2>Declaración de Derechos de Autor</h2>
+      <p>
+        © 2025 Santiago Ramírez. Todos los derechos reservados.  
+        Este documento es de uso personal y no puede ser reproducido, distribuido ni utilizado con fines distintos a los autorizados por el autor.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
