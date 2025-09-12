@@ -4,24 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hoja de Vida - Santiago Ramírez</title>
+  <link rel="stylesheet" href="estill.css">
 </head>
 
 <body>
-  <div>
+  <div class="container">
     <!-- Encabezado con nombre y foto -->
     <header>
-      <img src="image.jpg.jpeg" alt="Foto de perfil" width="120">
+      <img src="image.jpg.jpeg" alt="Foto de perfil" style="margin: 0 auto; width: 120px; border-radius: 30%;">
       <h1>Santiago Ramírez</h1>
-      <p>Desarrollador de Software | Técnico en Sistemas | Apasionado por la Tecnología</p>
+      <p>Hackeador Profesional</p>
     </header>
 
-    <!-- Botón de imprimir -->
-    <div>
-      <button onclick="window.print()">Imprimir</button>
-    </div>
+     <!-- boton de imprimir -->
+      <div class="print-button-container">
+
+            <button onclick="window.print()" class="print-button"> imprimir</button>
+      </div>
 
     <!-- Información Personal -->
-    <section>
+    <section class="section">
       <h2>Información Personal</h2>
       <ul>
         <li><strong>Email:</strong> Murillosanti16@gmail.com</li>
@@ -30,80 +32,35 @@
       </ul>
     </section>
 
-    <!-- Perfil Profesional -->
-    <section>
-      <h2>Perfil Profesional</h2>
-      <p>
-        Técnico en sistemas y desarrollador de software con experiencia en soporte técnico, desarrollo web y herramientas tecnológicas educativas. Apasionado por crear soluciones que faciliten la vida de las personas. Trabajo con responsabilidad, amabilidad y disposición al aprendizaje continuo.
-      </p>
-    </section>
-
     <!-- Educación -->
-    <section>
+    <section class="section">
       <h2>Educación</h2>
-      <div>
+      <div class="item">
         <h3>Institución Educativa Roberto Peláez</h3>
-        <p>Bachiller Técnico en Sistemas | 2016 - 2021</p>
-      </div>
-      <div>
-        <h3>Servicio Nacional de Aprendizaje (SENA)</h3>
-        <p>Tecnólogo en Análisis y Desarrollo de Software | 2022 - En curso</p>
-      </div>
-      <div>
-        <h3>Certificaciones</h3>
-        <ul>
-          <li>Introducción al Desarrollo Web - Google Actívate</li>
-          <li>Fundamentos de Python - Cisco Networking Academy</li>
-          <li>Curso de Soporte Técnico - Coursera (Google)</li>
-        </ul>
+        <p>Doctorado en Programación</p>
       </div>
     </section>
 
     <!-- Experiencia Laboral -->
-    <section>
+    <section class="section">
       <h2>Experiencia Laboral</h2>
-      <div>
-        <h3>Auxiliar de Soporte Técnico</h3>
-        <p>Alcaldía de Aguadas | 2022 - 2023</p>
-        <p>Brindé soporte técnico a equipos de cómputo, configuración de redes y asistencia en herramientas de oficina para empleados públicos.</p>
+      <div class="item">
+        <h3>Jefe de Empresa de Software y Hardware</h3>
+        <p>Creación de App de Comunicación | 2012</p>
+        <p>Universidad de Harvard</p>
       </div>
-      <div>
-        <h3>Practicante en Desarrollo Web</h3>
-        <p>Cooperativa Educativa Caldas | 2023</p>
-        <p>Participación en el desarrollo y mantenimiento de una plataforma educativa en línea usando HTML, CSS y JavaScript.</p>
-      </div>
-    </section>
-
-    <!-- Proyectos Personales -->
-    <section>
-      <h2>Proyectos Personales</h2>
-      <ul>
-        <li><strong>Sistema de Gestión Escolar:</strong> Aplicación web para registrar estudiantes, calificaciones y asistencia.</li>
-        <li><strong>Mi Portafolio:</strong> Página personal con proyectos y contacto. (github.com/santiago-dev/portafolio)</li>
-        <li><strong>App Agenda Diaria:</strong> Aplicación móvil básica para organizar tareas con recordatorios.</li>
-      </ul>
     </section>
 
     <!-- Habilidades -->
-    <section>
-      <h2>Habilidades Técnicas</h2>
-      <ul>
-        <li>HTML / CSS / JavaScript</li>
-        <li>Python (básico - intermedio)</li>
-        <li>Manejo de bases de datos (MySQL)</li>
-        <li>Soporte técnico a usuarios</li>
-        <li>Instalación de redes y software</li>
-        <li>Microsoft Office / Google Workspace</li>
+    <section class="section">
+      <h2>Habilidades</h2>
+      <ul class="skills">
+        <li>HTML / CSS</li>
+        <li>JavaScript Avanzado</li>
+        <li>Python</li>
+        <li>Oracle</li>
+        <li>C++</li>
       </ul>
-    </section>
-
-    <!-- Declaración de Derechos de Autor -->
-    <section>
-      <h2>Declaración de Derechos de Autor</h2>
-      <p>
-        © 2025 Santiago Ramírez. Todos los derechos reservados.  
-        Este documento es de uso personal y no puede ser reproducido, distribuido ni utilizado con fines distintos a los autorizados por el autor.
-      </p>
     </section>
   </div>
 </body>
