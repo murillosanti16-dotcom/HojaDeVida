@@ -1,137 +1,112 @@
-/* ========== GLOBAL STYLES ========== */
+/* Fuente y base */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: rgb(249, 248, 248);
-    color: rgb(0, 0, 0);
+    background-color: #f9f9f9;
+    color: #222;
     margin: 0;
     padding: 0;
 }
 
-/* ========== CONTAINER ========== */
+/* Contenedor principal */
 .container {
     width: 80%;
     max-width: 800px;
     margin: 20px auto;
-    background: rgb(255, 255, 255);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(50, 49, 49, 0.804);
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* ========== HEADER ========== */
+/* Encabezado */
 header {
     text-align: center;
     margin-bottom: 20px;
 }
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #feffff;
-}
-
-/* ========== TITULOS ========== */
-h1 {
-    color: rgb(0, 0, 0);
-    margin: 10px 0;
-}
-
-h2 {
+header h1 {
+    margin: 10px 0 5px;
+    font-size: 28px;
     color: #2c3e50;
-    font-size: 1.3em;
+}
+header p {
+    font-size: 16px;
+    color: #555;
 }
 
-h3 {
-    margin: 5px 0;
-    font-size: 1.1em;
-}
-
-/* ========== SECCIONES ========== */
-.section {
+/* Botón de imprimir */
+.print-button-container {
+    text-align: right;
     margin-bottom: 20px;
+}
+.print-button {
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.print-button:hover {
+    background-color: #34495e;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: none;
+    border-bottom: 1px solid #ddd; /* línea gris elegante */
+}
+.section:last-child {
+    border-bottom: none; /* la última no lleva línea */
+}
+.section h2 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-/* ========== LISTAS Y HABILIDADES ========== */
-ul {
-    list-style: none;   /* 🔹 quita los punticos */
-    padding-left: 0;    /* 🔹 elimina sangría */
+/* Items (educación, experiencia) */
+.item h3 {
     margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+.item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #444;
 }
 
-.skills {
-    list-style-type: none;
+/* Listas */
+ul {
+    list-style: none; /* quitamos los puntos */
     padding: 0;
+}
+ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Habilidades */
+.skills {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-
 .skills li {
-    background: #d5d6d7;
-    color: rgb(26, 20, 20);
+    background: #2c3e50;
+    color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
+    font-size: 13px;
 }
 
-/* ========== BOTÓN DE IMPRIMIR ========== */
-.print-button-container {
-    text-align: center;
-    margin: 20px;
-}
-
-.print-button {
-    background: #2a4b2b;
-    color: white;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.4s ease;
-}
-
-.print-button:hover {
-    background-color: #8e97a0;
-}
-
-/* ========== FOOTER ========== */
+/* Footer */
 footer {
     text-align: center;
-    font-size: 0.9em;
+    font-size: 13px;
     color: #555;
     margin-top: 30px;
-}
-
-/* ========== ESTILOS PARA IMPRESIÓN ========== */
-@media print {
-    body {
-        background: white;
-        margin: 0;
-        padding: 0;
-    }
-
-    .container {
-        box-shadow: none;
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0 20px;
-    }
-
-    .print-button-container {
-        display: none;
-    }
-
-    .section {
-        page-break-inside: avoid;
-    }
-
-    footer {
-        page-break-after: avoid;
-        margin-top: 20px;
-    }
 }
