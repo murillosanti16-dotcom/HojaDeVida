@@ -52,12 +52,14 @@ h3 {
 .section {
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: none; /* quitamos los punticos */
+    border-bottom: none;
 }
 
 /* ========== LISTAS Y HABILIDADES ========== */
 ul {
-    padding-left: 20px;
+    list-style: none;   /* 🔹 quita los punticos */
+    padding-left: 0;    /* 🔹 elimina sangría */
+    margin: 0;
 }
 
 .skills {
