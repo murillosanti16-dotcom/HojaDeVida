@@ -36,7 +36,7 @@ header p {
 
 /* Botón de imprimir */
 .print-button-container {
-    text-align: right;
+    text-align: center;
     margin-bottom: 20px;
 }
 .print-button {
